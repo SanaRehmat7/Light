@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Bulb</title>
+    <link rel="stylesheet" href="light.css"/>
+</head>
+<body style="background-color: black;">
+    <img id="bulb" src="https://path-to-your-image-folder/image_bulb_off.jfif" alt="Bulb is off" class="center">
+    <button id="toggleBtn" class="center btn">Turn On</button>
+
+    <script>
+        let btn = document.getElementById('toggleBtn');
+        let bulb = document.getElementById('bulb');
+
+        // Add event listener to the button
+        btn.addEventListener('click', toggleBulb);
+
+        function toggleBulb() {
+            if (btn.textContent.includes('On')) {
+                // Turn the bulb on
+                bulb.src = "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg";
+                btn.textContent = "Turn Off";
+            } else {
+                // Turn the bulb off
+                bulb.src = "\off bulb.jfif";  
+                btn.textContent = "Turn On";
+            }
+        }
+    </script>
+</body>
+</html>
